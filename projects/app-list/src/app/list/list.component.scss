@@ -1,0 +1,20 @@
+input {
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 150 !important;
+}
+
+ul {
+    margin-top: 37px !important;
+}
+
+.is-favorite {
+    color: green;
+}
+.not-favorite {
+    opacity: .2;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}

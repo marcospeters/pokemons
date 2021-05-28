@@ -1,0 +1,11 @@
+<div class="input-group rounded">
+    <input type="search" class="form-control rounded" 
+    placeholder="Buscar Pokemon" aria-label="Buscar Pokemon" 
+    #search (input)="onSearch(search.value)"/>
+</div>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of pokemonsListFilter">
+        <span class="cursor-pointer" (click)="favorite(item.name)" [ngClass]="isfavorite(item.name)? 'is-favorite' : 'not-favorite' " >&#9733;</span>
+        {{item.name}}
+    </li>
+</ul>

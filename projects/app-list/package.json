@@ -1,0 +1,9 @@
+{
+  "name": "@pokemon/app-pokemon",
+  "version": "2.1.0",
+  "scripts": {},
+  "publishConfig": {},
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {}
+}

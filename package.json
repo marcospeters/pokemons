@@ -1,0 +1,63 @@
+{
+  "name": "pokemon",
+  "version": "2.1.0",
+  "scripts": {
+    "ng": "./node_modules/.bin/ng",
+    "start": "npm run start:app-pokemons",
+    "start:app-pokemons": "./node_modules/.bin/ng serve pokemon --disable-host-check",
+    "start-prettier": "npx prettier --write --check --single-quote \"projects/**/*.ts\"",
+    "initial-build": "npm i && npm run build-lib:store",
+    "build": "./node_modules/.bin/ng build",
+    "build-lib:store": "./node_modules/.bin/ng build @pokemon-lib/store",
+    "test": "./node_modules/.bin/ng test",
+    "lint": "./node_modules/.bin/ng lint",
+    "tslint": "./node_modules/.bin/tslint --force -t json -o report.json --fix --project .",
+    "e2e": "./node_modules/.bin/ng e2e"
+  },
+  "lint-staged": {
+    "*.{ts,scss,html}": "npm run start-prettier"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular-devkit/build-ng-packagr": "^0.1002.0",
+    "@angular/animations": "~12.0.2",
+    "@angular/common": "~12.0.2",
+    "@angular/compiler": "~12.0.2",
+    "@angular/core": "~12.0.2",
+    "@angular/elements": "^12.0.2",
+    "@angular/forms": "~12.0.2",
+    "@angular/localize": "^12.0.2",
+    "@angular/platform-browser": "~12.0.2",
+    "@angular/platform-browser-dynamic": "~12.0.2",
+    "@angular/router": "~12.0.2",
+    "@ng-bootstrap/ng-bootstrap": "^9.1.1",
+    "bootstrap": "^4.5.0",
+    "jasmine": "^3.5.0",
+    "json-server": "^0.16.1",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-spec-reporter": "0.0.32",
+    "ng-packagr": "^12.0.2",
+    "puppeteer": "^9.1.1",
+    "rxjs": "~6.6.0",
+    "rxjs-compat": "~6.6.0",
+    "tslib": "^2.1.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^12.0.2",
+    "@angular/cli": "~12.0.2",
+    "@angular/compiler-cli": "~12.0.2",
+    "@ngxs/devtools-plugin": "^3.6.2",
+    "@ngxs/logger-plugin": "^3.6.2",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "@ngxs/store": "^3.6.2",
+    "jasmine-core": "~3.7.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "typescript": "~4.2.3"
+  }
+}

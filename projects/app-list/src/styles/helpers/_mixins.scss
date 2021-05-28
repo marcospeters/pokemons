@@ -1,0 +1,25 @@
+//vars
+$brand-color-gray-light: #d1d3d4;
+$brand-color-gray: #808284;
+
+//borders
+$border-50: 50%;
+
+//mixins
+@mixin transition($timer: 0.2s) {
+  transition: all $timer ease-in;
+}
+
+@mixin transform($scaledefault: 1.01) {
+  transform: scale($scaledefault);
+}
+
+@mixin shadowbox($shadowdefault: 0px 0px 17px -9px #000) {
+  box-shadow: $shadowdefault;
+}
+
+@mixin keyframes($slideupdown) {
+  @keyframes #{$slideupdown} {
+    @content;
+  }
+}
